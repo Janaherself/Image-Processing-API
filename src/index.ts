@@ -7,11 +7,11 @@ import sharp from 'sharp';
 
 const app = express();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 
-const IMAGES_FOLDER = path.join(__dirname, '..', 'images');
-const CACHE_FOLDER = path.join(__dirname, '..', 'cache');
+const IMAGES_FOLDER = path.join(_dirname, '..', 'images');
+const CACHE_FOLDER = path.join(_dirname, '..', 'cache');
 
 // Ensure folders exist
 if (!fs.existsSync(IMAGES_FOLDER)) {
