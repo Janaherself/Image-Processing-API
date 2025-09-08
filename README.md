@@ -12,6 +12,7 @@
   <li>Error handling for missing/invalid parameters.</li>
   <li>TypeScript + ES Modules, with full linting & formatting.</li>
   <li>Fully tested with Jasmine & SuperTest.</li>
+  <li>Logs every API call and cache hit using morgan.</li>
 </ul>
 
 <br>
