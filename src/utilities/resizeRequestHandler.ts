@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import sharp from 'sharp';
 import type { Request, Response } from 'express';
+import { resizeImage } from './imageProcessor.js';
 
 const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
@@ -84,7 +84,7 @@ export async function handleResizeRequest(
 
     try {
       // Resize and save to cache
-      await sharp(safePath).resize(widthNum, heightNum).toFile(cachedFile);
+      await resizeImage(safePath, cachedFile, widthNum, heightNum);
 
       // Return resized image
       return res.sendFile(cachedFile);

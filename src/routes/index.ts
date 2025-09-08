@@ -1,6 +1,6 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import { handleResizeRequest } from '../utils/resizeRequestHandler.js';
+import { handleResizeRequest } from '../utilities/resizeRequestHandler.js';
 
 const app = express();
 

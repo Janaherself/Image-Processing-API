@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { resizeImage } from '../../utils/imageProcessor.js';
+import { resizeImage } from '../../utilities/imageProcessor.js';
 
 describe('processImage utility function', () => {
   it('should resize and save an image', async () => {
