@@ -1,5 +1,5 @@
 import supertest from 'supertest';
-import app from '../../index.js';
+import app from '../../routes/index.js';
 
 const request = supertest(app);
 

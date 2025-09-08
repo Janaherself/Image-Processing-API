@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'url';
-import app from './index.js';
+import app from './routes/index.js';
 import morgan from 'morgan';
 import fs from 'fs';
 import path from 'path';

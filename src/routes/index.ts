@@ -1,8 +1,9 @@
 import express from 'express';
 import type { Request, Response } from 'express';
-import { handleResizeRequest } from './utils/resizeRequestHandler.js';
+import { handleResizeRequest } from '../utils/resizeRequestHandler.js';
 
 const app = express();
+
 app.get('/resize', async (req: Request, res: Response) => {
   const { path: filename, width, height } = req.query;
   await handleResizeRequest(
