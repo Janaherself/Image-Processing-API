@@ -1,16 +1,18 @@
-import {DisplayProcessor, SpecReporter, StacktraceOption} from "jasmine-spec-reporter";
-import SuiteInfo = jasmine.SuiteInfo;// to runn this without error:"verbatimModuleSyntax": false,
+import { DisplayProcessor, SpecReporter, StacktraceOption } from 'jasmine-spec-reporter';
+import SuiteInfo = jasmine.SuiteInfo; // to runn this without error:"verbatimModuleSyntax": false,
 
 class CustomProcessor extends DisplayProcessor {
-    public displayJasmineStarted(info: SuiteInfo, log: string): string {
-        return `${log}`;
-    }
+  public displayJasmineStarted(info: SuiteInfo, log: string): string {
+    return `${log}`;
+  }
 }
 
 jasmine.getEnv().clearReporters();
-jasmine.getEnv().addReporter(new SpecReporter({
+jasmine.getEnv().addReporter(
+  new SpecReporter({
     spec: {
-        displayStacktrace: StacktraceOption.NONE
+      displayStacktrace: StacktraceOption.NONE,
     },
     customProcessors: [CustomProcessor],
-}));
+  }),
+);
